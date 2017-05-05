@@ -1,0 +1,38 @@
+{
+  "name": "dding-thrift",
+  "version": "1.0.0",
+  "description": "Thrift module with zookeeper which created by Yunding-network",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test --reporter mochawesome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yunding-network/thrift.git"
+  },
+  "keywords": [
+    "thrift",
+    "zookeeper",
+    "dding",
+    "yunding"
+  ],
+  "author": "Yunding-network",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yunding-network/thrift/issues"
+  },
+  "homepage": "https://github.com/yunding-network/thrift#readme",
+  "dependencies": {
+    "async": "^2.4.0",
+    "ip": "^1.1.5",
+    "moment": "^2.18.1",
+    "thrift": "^0.10.0",
+    "underscore": "^1.8.3",
+    "zookeeper": "^3.4.9-3"
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0",
+    "mochawesome": "^2.1.0",
+    "should": "^11.2.1"
+  }
+}
