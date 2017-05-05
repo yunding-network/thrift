@@ -114,7 +114,7 @@ describe('Thrift Server With Zookeeper In Common Connect Test', function(){
       });
 
       should.exist(zhs.services[serviceName].add);
-      zhs.start(function(){
+      zhs.start('/', function(){
         getNodeValue_Protogenesis(zkOption, zkServicePath, function(gnErr, data, state){
           should.not.exist(gnErr);
           should.exist(data);
