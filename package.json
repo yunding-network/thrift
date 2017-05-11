@@ -1,6 +1,6 @@
 {
   "name": "dding-thrift",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Thrift module with zookeeper which created by Yunding-network",
   "main": "index.js",
   "scripts": {

@@ -22,10 +22,21 @@ zclient.initConnection({
 	transport: DDingThrift.TRANSPORT.BUFFER 	// (optional) default: TBufferedTransport
 }, function(){
 
-	var serviceName = 'Calculator'; // serviceName is thrift'file define service'name
-	var service = zclient.getService(serviceName);
+	// var serviceName = 'Calculator'; // serviceName is thrift'file define service'name
+	// var service = zclient.getService(serviceName);
 
-	// service's proxy will balance server
+	// // service's proxy will balance server
+	// service.proxy('add', 1, 2, function(error, result){
+	// 	if(error){
+	// 		console.error('Client get error: %j', error);
+	// 	}
+
+	// 	console.log('Client get result: %d', result);
+	// });
+
+	var serviceName = 'Calculator';
+	var service = zclient.getServiceByClientId('192.168.20.49:3000', serviceName);
+
 	service.proxy('add', 1, 2, function(error, result){
 		if(error){
 			console.error('Client get error: %j', error);
