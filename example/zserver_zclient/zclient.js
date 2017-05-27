@@ -14,7 +14,7 @@ zclient.initZookeeper({
 	isBuffer: false
 });
 
-zclient.initConnection({
+zclient.initConnection('testPrefix', {
 	// zclient will auto get host and port from zookeeper
 	// zclient will auto judge connect type from zookeeper
 	thrift_gen: path.normalize(__dirname + '/../thrift/gen-nodejs/'),
@@ -35,8 +35,7 @@ zclient.initConnection({
 	// });
 
 	var serviceName = 'Calculator';
-	var service = zclient.getServiceByClientId('192.168.20.49:3000', serviceName);
-
+	var service = zclient.getServiceByClientId('192.168.20.78:3000', serviceName);
 	service.proxy('add', 1, 2, function(error, result){
 		if(error){
 			console.error('Client get error: %j', error);

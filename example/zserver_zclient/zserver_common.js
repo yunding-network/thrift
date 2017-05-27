@@ -4,7 +4,7 @@ var DDingThrift = require('../../index'),
 
 var path = require('path');
 
-var zserver_common = ZCommonServer.create();
+var zserver_common = ZCommonServer.create('testPrefix');
 
 zserver_common.initZookeeper({
 	hosts: '127.0.0.1:2181', // support more like:{hosts: '127.0.0.1:2181, 127.0.0.1:2182, 127.0.0.1:2183'}
